@@ -15,34 +15,36 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
+import java.util.List;
+
 /**
  * Created by Lycast on 11/07/2021.
  */
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
-    private Pokemon mPokemons[];
-    private Context mContext;
+    private List<Pokemon> pokemonList;
+    private Context context;
 
-    public MyAdapter(Context ct, Pokemon[] pokemons){
-        mContext = ct;
-        this.mPokemons = pokemons;
+    public MyAdapter(Context context, List<Pokemon> pokemonList){
+        this.context = context;
+        this.pokemonList = pokemonList;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(mContext);
+        LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.my_row, parent, false);
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyAdapter.MyViewHolder holder, int position) {
-        Pokemon pokemon = mPokemons[position];
+        Pokemon pokemon = pokemonList.get(position);
 
         holder.tvPkmnName.setText(pokemon.getName());
         holder.tvPkmnNumero.setText(pokemon.getNumero());
-        Glide.with(mContext)
+        Glide.with(context)
                 .load(pokemon.getImage())
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .into(holder.imgPkmn);
@@ -51,7 +53,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public int getItemCount() {
-        return mPokemons.length;
+        return pokemonList.size();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
