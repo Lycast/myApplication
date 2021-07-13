@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="greeting_msg">Welcome</string>
+    <string-array name="pokemon_name">
+        <item>bulbizarre</item>
+        <item>herbizarre</item>
+        <item>florizarre</item>
+        <item>salameche</item>
+        <item>reptincel</item>
+        <item>dracaufeu</item>
+        <item>carapuce</item>
+        <item>carabaffe</item>
+        <item>tortank</item>
+        <item>chenipan</item>
+    </string-array>
+
+    <string-array name="pokedex_number">
+        <item>001</item>
+        <item>002</item>
+        <item>003</item>
+        <item>004</item>
+        <item>005</item>
+        <item>006</item>
+        <item>007</item>
+        <item>008</item>
+        <item>009</item>
+        <item>010</item>
+    </string-array>
+
+    <string-array name="pokemon_image_url">
+        <item>https://www.pokepedia.fr/images/4/4e/Miniature_001_LGPE.png</item>
+        <item>https://www.pokepedia.fr/images/f/fb/Miniature_002_LGPE.png</item>
+        <item>https://www.pokepedia.fr/images/6/60/Miniature_003_LGPE.png</item>
+        <item>https://www.pokepedia.fr/images/8/89/Miniature_004_LGPE.png</item>
+        <item>https://www.pokepedia.fr/images/3/35/Miniature_005_LGPE.png</item>
+        <item>https://www.pokepedia.fr/images/6/68/Miniature_006_LGPE.png</item>
+        <item>https://www.pokepedia.fr/images/9/95/Miniature_007_LGPE.png</item>
+        <item>https://www.pokepedia.fr/images/b/b6/Miniature_008_LGPE.png</item>
+        <item>https://www.pokepedia.fr/images/7/73/Miniature_009_LGPE.png</item>
+        <item>https://www.pokepedia.fr/images/1/11/Miniature_010_LGPE.png</item>
+    </string-array>
+</resources>

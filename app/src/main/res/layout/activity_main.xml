@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/greeting_msg"
+        android:gravity="center"
+        android:textSize="15pt"
+        android:paddingBottom="50dp"
+        />
+
+
+    <EditText
+        android:id="@+id/activity_main_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="100dp"
+        android:background="#ededed"
+        android:gravity="center"
+        android:textSize="12pt"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:hint="username"
+        />
+
+
+    <EditText
+        android:id="@+id/activity_main_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="100dp"
+        android:background="#ededed"
+        android:gravity="center"
+        android:textSize="12pt"
+        android:inputType="textPassword"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_marginTop="25dp"
+        android:hint="password"
+        />
+
+    <Button
+        android:id="@+id/btn_activity_main_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="75dp"
+        android:background="#9c9c9c"
+        android:layout_marginTop="50dp"
+        android:text="Start"
+        android:onClick="login"
+        />
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
