@@ -44,7 +44,6 @@
         android:gravity="center"
         android:textSize="12pt"
         android:inputType="textPassword"
-        style="@style/Widget.AppCompat.Spinner.Underlined"
         android:layout_marginTop="25dp"
         android:hint="password"
         />
@@ -57,7 +56,6 @@
         android:background="#9c9c9c"
         android:layout_marginTop="50dp"
         android:text="Start"
-        android:onClick="login"
         />
 
 
