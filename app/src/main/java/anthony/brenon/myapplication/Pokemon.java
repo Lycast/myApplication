@@ -23,7 +23,5 @@ class Pokemon{
         return name;
     }
 
-    public String getNumero() {
-        return numero;
-    }
+    public String getNumero() { return numero; }
 }

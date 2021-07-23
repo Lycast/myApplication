@@ -1,13 +1,10 @@
 package anthony.brenon.myapplication;
 
 import android.content.Context;
-import android.media.Image;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,30 +17,36 @@ import java.util.List;
 /**
  * Created by Lycast on 11/07/2021.
  */
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
+public class MyAdapter extends RecyclerView.Adapter<PokemonViewHolder> {
+
+    /*public interface Listener {
+        void onClickDeleteButton(int position);
+    }
+    private final Listener callback;*/
 
     private List<Pokemon> pokemonList;
     private Context context;
 
-    public MyAdapter(Context context, List<Pokemon> pokemonList){
+    public MyAdapter(Context context, List<Pokemon> pokemonList /*Listener callback*/){
         this.context = context;
         this.pokemonList = pokemonList;
+        //this.callback = callback;
     }
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public PokemonViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.my_row, parent, false);
-        return new MyViewHolder(view);
+        return new PokemonViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull PokemonViewHolder holder, int position /*this.callback*/) {
         Pokemon pokemon = pokemonList.get(position);
 
         holder.tvPkmnName.setText(pokemon.getName());
-        holder.tvPkmnNumero.setText(pokemon.getNumero());
+        holder.tvPkmnNumber.setText(pokemon.getNumero());
         Glide.with(context)
                 .load(pokemon.getImage())
                 .diskCacheStrategy(DiskCacheStrategy.NONE)
@@ -56,16 +59,4 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         return pokemonList.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-
-        TextView tvPkmnName, tvPkmnNumero;
-        ImageView imgPkmn;
-
-        public MyViewHolder(@NonNull View itemView) {
-            super(itemView);
-            tvPkmnName = itemView.findViewById(R.id.name_pkm);
-            tvPkmnNumero = itemView.findViewById(R.id.no_pkm);
-            imgPkmn = itemView.findViewById(R.id.img_pokemon);
-        }
-    }
 }
