@@ -1,4 +1,4 @@
-package anthony.brenon.myapplication;
+package anthony.brenon.myapplication.global;
 
 import android.view.View;
 
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 /**
  * Created by Lycast on 19/07/2021.
  */
-class ItemClickSupport {
+public class ItemClickSupport {
     private final RecyclerView recyclerView;
     private OnItemClickListener onItemClickListener;
     private OnItemLongClickListener onItemLongClickListener;

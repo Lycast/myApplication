@@ -1,13 +1,14 @@
-package anthony.brenon.myapplication;
+package anthony.brenon.myapplication.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import anthony.brenon.myapplication.R;
 
 public class MainActivity extends AppCompatActivity {
 
