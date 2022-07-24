@@ -12,7 +12,7 @@ import anthony.brenon.myapplication.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String USERNAME = "admin@admin.com";
+    private static final String USERNAME = "admin";
     private static final String PASSWORD = "admin";
     private EditText etPassword;
     private EditText etUsername;

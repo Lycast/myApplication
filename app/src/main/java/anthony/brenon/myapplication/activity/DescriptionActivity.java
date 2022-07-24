@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+
 import anthony.brenon.myapplication.R;
 
 public class DescriptionActivity extends AppCompatActivity {
@@ -38,6 +41,9 @@ public class DescriptionActivity extends AppCompatActivity {
         String description = getIntent().getExtras().getString("description");
         tvDescription.setText(description);
         String image = getIntent().getExtras().getString("image");
-        //ivPokemon.setImageResource(image);
+        Glide.with(this)
+                .load(image)
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .into(ivPokemon);
     }
 }
